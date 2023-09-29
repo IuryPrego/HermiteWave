@@ -2,14 +2,14 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
-# parâmetros
+#parâmetros
 wl = 1
 z = 1
 w0 = 1
 m = 1
 n = 1
 
-# parâmetros calculáveis
+#parâmetros calculáveis
 k = 2 * np.pi / wl
 Nmn = np.sqrt(2 ** (1 - (m + n))) / (np.sqrt(np.pi) * math.factorial(m) * math.factorial(n))
 zr = np.pi * w0 ** 2 / wl
@@ -17,7 +17,7 @@ rz = z * (1 + (zr / z) ** 2)
 wz = w0 * np.sqrt(1 + (z ** 2 / zr ** 2))
 phase = (m + n + 1) * np.arctan(z / zr)
 
-# polinômios de hermite
+#polinômios de hermite
 Hm = np.polynomial.hermite.Hermite([0] * m + [1])
 Hn = np.polynomial.hermite.Hermite([0] * n + [1])
 
